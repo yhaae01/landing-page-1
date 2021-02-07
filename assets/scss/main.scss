@@ -1,0 +1,120 @@
+// Variables
+$primaryColor: #212F54;
+$secondaryColor: #939CCD;
+$tertiaryColor:#C1C5DC;
+$textDefalut: black;
+
+// Style
+body {
+    font-family: 'Montserrat', 'Quicksand', sans-serif;
+
+    &::before {
+        content: '';
+        background-image: url(../img/bg.png);
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-size: 50vmax;
+        background-position-y: 5em;
+        opacity: 0.9;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        @media screen and (max-width:992px) {
+            opacity: 0.4;
+        }
+    }
+
+}
+
+// Navbar
+.custom-nav {
+    .navbar-brand {
+        img {
+            width: 20px;
+            height: 20px;
+            margin-top: -5px;
+        }
+
+        span {
+            color: $primaryColor;
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin-left: 0.5em;
+        }
+    }
+
+    #navbarNav {
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    color: $primaryColor;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    margin-left: 2.4em;
+                    transition: 0.5s color ease;
+                    border-bottom: 1px solid transparent;
+
+                    &:hover {
+                        color: $secondaryColor;
+                        border-bottom: 1px solid;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        margin-top: -1em;
+    }
+}
+
+.custom-section {
+    margin-top: 5em;
+
+    h2 {
+        font-weight: 700;
+        font-size: 3rem;
+        color: $primaryColor;
+    }
+
+    p {
+        color: $secondaryColor;
+        font-size: 1.1rem;
+        margin-top: 1em;
+    }
+
+    a {
+        display: inline-block;
+        padding: 0.5em 2em;
+        background-color: #F9A947;
+        color: white;
+        text-decoration: none;
+        border-radius: 2em;
+        border: 2px solid transparent;
+        margin-top: 2em;
+        transition: 0.2s ease;
+
+        &:hover {
+            color: #FABC58;
+            border: 2px solid;
+            background-color: transparent;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        margin-top: 3.5em;
+        text-align: center;
+
+        h2,
+        p {
+            text-shadow: 1px 1px 0.5px rgba($primaryColor, 0.4);
+        }
+
+        p {
+            color: lighten($textDefalut, 10%);
+        }
+    }
+}
